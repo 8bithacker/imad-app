@@ -55,11 +55,11 @@ var articles = {
 }
 };
 
-function createtemplate(data){
-var title=data.title;
-var date=data.date;
-var heading=data.heading;
-var content=data.content;
+function createTemplate (data) {
+var title = data.title;
+var date = data.date;
+var heading = data.heading;
+var content = data.content;
 
 
 var htmltemplate=`
@@ -98,9 +98,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:articlename', function (req, res) {
-   var articlename=req.param.articlename;
-   res.send(createtemplate(articles[articlename]));
+app.get('/:articleName', function (req, res) {
+   var articleName = req.param.articleName;
+   res.send(createTemplate(articles[articleName]));
 });
 
 app.get('/ui/madi.png', function (req, res) {

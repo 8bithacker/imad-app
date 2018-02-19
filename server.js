@@ -1,17 +1,16 @@
-var express = require('express');
-var morgan = require('morgan');
-var path = require('path');
+var express=require('express');
+var morgan=require('morgan');
+var path=require('path');
 
-var app = express();
+var app=express();
 app.use(morgan('combined'));
 
-var articles = {
-'article-one' : {
-    title: 'Article one|gaurav rane',
-    heading: 'article one',
-    date: 'feb 17,2018',
-    content:`
-    <p>
+var articles={
+'article-one':{
+    title:'Article one|gaurav rane',
+    heading:'article one',
+    date:'feb 17,2018',
+    content:`<p>
         k
     </p>
     <p>
@@ -21,12 +20,11 @@ var articles = {
         kkk
     </p>`
     },
-'article-two' : {
-    title: 'Article two|gaurav rane',
-    heading: 'article two',
-    date: 'feb 17,2018',
-    content:`
-    <p>
+'article-two':{
+    title:'Article two|gaurav rane',
+    heading:'article two',
+    date:'feb 17,2018',
+    content:`<p>
         k
     </p>
     <p>
@@ -35,14 +33,12 @@ var articles = {
     <p>
         kkk
     </p>`
-    
 },
-'article-three' : {
-    title: 'Article three|gaurav rane',
-    heading: 'article three',
-    date: 'feb 17,2018',
-    content:`
-    <p>
+'article-three':{
+    title:'Article three|gaurav rane',
+    heading:'article three',
+    date:'feb 17,2018',
+    content:`<p>
         k
     </p>
     <p>
@@ -51,19 +47,16 @@ var articles = {
     <p>
         kkk
     </p>`
-    
 }
 };
-
 function createTemplate(data){
-var title = data.title;
-var date = data.date;
-var heading = data.heading;
-var content = data.content;
+var title=data.title;
+var date=data.date;
+var heading=data.heading;
+var content=data.content;
 
 
-var htmltemplate=`
-<html>
+var htmltemplate=`<html>
  <head>
     <title>
    ${title}
@@ -89,8 +82,7 @@ var htmltemplate=`
 </div>
 </div>
  </body>
-</html>
-`;
+</html>`;
 return htmltemplate;
 }
 
